@@ -2,13 +2,21 @@ package com.project.dto;
 
 public class BusDTOImpl implements BusDTO{
 
-	
+	private int BusId;
 	private String BusNumber;
 	private String BusType;
 	private int TotalSeats;
 	
 	public BusDTOImpl() {
 		
+	}
+	
+	public BusDTOImpl(int busId, String busNumber, String busType, int totalSeats) {
+		super();
+		BusId=busId;
+		BusNumber = busNumber;
+		BusType = busType;
+		TotalSeats = totalSeats;
 	}
 	
 	public BusDTOImpl(String busNumber, String busType, int totalSeats) {
@@ -20,6 +28,16 @@ public class BusDTOImpl implements BusDTO{
 	}
 
 	
+
+	@Override
+	public int getBusId() {
+		return BusId;
+	}
+
+	@Override
+	public void setBusId(int busId) {
+		BusId = busId;
+	}
 
 	@Override
 	public String getBusNumber() {
@@ -53,7 +71,9 @@ public class BusDTOImpl implements BusDTO{
 
 	@Override
 	public String toString() {
-		return "BusDTOImpl [BusNumber=" + BusNumber + ", BusType=" + BusType + ", TotalSeats=" + TotalSeats + "]";
+//		return "BusDTOImpl [BusNumber=" + BusNumber + ", BusType=" + BusType + ", TotalSeats=" + TotalSeats + "]";
+		return "        " + BusNumber + "       " + BusType + "        " + TotalSeats + "";
+	
 	}
 
 	

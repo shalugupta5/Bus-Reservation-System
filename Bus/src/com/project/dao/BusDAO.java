@@ -10,7 +10,7 @@ public interface BusDAO {
 	 
 	 public List<BusDTO> getAllBuses();
 	 
-	// public void updateBus(BusDTO bus);
+	 public void updateBus(BusDTO bus);
 	 
-	// public void deleteBus(int busID);
+	 public void deleteBus(int busID);
 }
