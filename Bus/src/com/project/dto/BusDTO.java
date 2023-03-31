@@ -2,7 +2,9 @@ package com.project.dto;
 
 public interface BusDTO {
 	
-	
+	public int getBusId();
+
+	public void setBusId(int busId);
 
 	public String getBusNumber();
 	
