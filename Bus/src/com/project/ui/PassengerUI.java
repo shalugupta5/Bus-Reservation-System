@@ -2,6 +2,8 @@ package com.project.ui;
 
 import java.util.Scanner;
 
+import com.project.dao.BookingDAO;
+import com.project.dao.BookingDAOImpl;
 import com.project.dao.PassengerDAO;
 import com.project.dao.PassengerDAOImpl;
 import com.project.dto.PassengerDTO;
@@ -9,6 +11,7 @@ import com.project.dto.PassengerDTOImpl;
 
 public class PassengerUI {
 
+	static String username;
 	private Scanner sc;
 
 	public PassengerUI(Scanner sc) {
@@ -29,13 +32,15 @@ public class PassengerUI {
 		PassengerDTO passengerdto = new PassengerDTOImpl(Name, MobileNumber, Password);
 		PassengerDAO passengerdao = new PassengerDAOImpl();
 		
-		String username = passengerdao.addPassenger(passengerdto);
+		 username = passengerdao.addPassenger(passengerdto);
 		if(username!=null) {
 			System.out.println("Here is your username please note it down.");
 			System.out.println();
 			System.out.println(username);
 			System.out.println();
 		}
+		
+		
 		
 	}
 	
@@ -56,4 +61,11 @@ public class PassengerUI {
 		return message;
 		
 	}
+	
+	public static String getPassengerID() {
+		
+		String username=PassengerUI.username;
+		return username;
+	}
+	
 }
