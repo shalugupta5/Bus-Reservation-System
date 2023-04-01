@@ -126,7 +126,9 @@ public class Main {
 				break;
 				
 			case 1:
+				
 				busUI.displayAllBuses();
+				
 				break;
 				
 			}
