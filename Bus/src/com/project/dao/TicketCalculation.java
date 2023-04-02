@@ -15,7 +15,7 @@ public class TicketCalculation {
 	
 	private static double calculatePrice(String source, String destination)  {
 		double distance=0;
-		double pricePerKm=20;
+		double pricePerKm=2;
 		double price=0;
 		try(Connection con = DBUtils.provideConnection()) {
 			String query="Select distance from routes where SourceLocation = ? and DestinationLocation = ?";
