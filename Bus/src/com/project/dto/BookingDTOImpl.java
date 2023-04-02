@@ -1,5 +1,7 @@
 package com.project.dto;
 
+import java.sql.Timestamp;
+
 public class BookingDTOImpl implements BookingDTO{
 	
 	private int bookingId;
@@ -7,11 +9,20 @@ public class BookingDTOImpl implements BookingDTO{
 	private int passengerId;
 	private int numberOfSeats;
 	private double totalCost;
+	private Timestamp cancleTicket;
 	
 	public BookingDTOImpl() {
 		
 	}
 	
+	public BookingDTOImpl(int scheduleId, int passengerId, int numberOfSeats, double totalCost) {
+		super();
+		
+		this.scheduleId = scheduleId;
+		this.passengerId = passengerId;
+		this.numberOfSeats = numberOfSeats;
+		this.totalCost = totalCost;
+	}
 	public BookingDTOImpl(int bookingId, int scheduleId, int passengerId, int numberOfSeats, double totalCost) {
 		super();
 		this.bookingId = bookingId;

@@ -3,6 +3,7 @@ package com.project.dao;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.Time;
 
 import com.project.dto.ScheduleDTO;
@@ -12,16 +13,36 @@ public class ScheduleDAOImpl implements ScheduleDAO{
 	@Override
 	public void addSchedule(ScheduleDTO schedule) {
 		try(Connection con = DBUtils.provideConnection()){
-			String query="INSERT INTO schedules (BusID, RouteID, DepartureTime, ArrivalTime, JourneyDate) VALUES (?, ?, ?, ?, ?)";
-			PreparedStatement ps = con.prepareStatement(query);
-			ps.setInt(1, schedule.getBusId());
-			ps.setInt(2, schedule.getRouteId());
-			ps.setTime(3, Time.valueOf(schedule.getDepartureTime()));
-			ps.setTime(4, Time.valueOf(schedule.getArrivalTime()));
-			ps.setDate(5, Date.valueOf(schedule.getJourneyDate()));
-			if(ps.executeUpdate()>0) {
-				System.out.println("New schedule added successfully");
+			String query1="select TotalSeats from buses where BusID=?";
+			PreparedStatement ps1 = con.prepareStatement(query1);
+			ps1.setInt(1, schedule.getBusId());
+			
+			ResultSet rs=ps1.executeQuery();
+			if(DBUtils.isResultSetEmpty(rs)) {
+				System.out.println("No record");
 			}
+			else {
+				while(rs.next()) {
+					schedule.setAvailableSeats(rs.getInt("TotalSeats"));
+					
+					String query="INSERT INTO schedules (BusID, RouteID, DepartureTime, ArrivalTime, JourneyDate, AvailableSeats) VALUES (?, ?, ?, ?, ?,?)";
+					PreparedStatement ps = con.prepareStatement(query);
+					ps.setInt(1, schedule.getBusId());
+					ps.setInt(2, schedule.getRouteId());
+					ps.setTime(3, Time.valueOf(schedule.getDepartureTime()));
+					ps.setTime(4, Time.valueOf(schedule.getArrivalTime()));
+					ps.setDate(5, Date.valueOf(schedule.getJourneyDate()));
+					ps.setInt(6, schedule.getAvailableSeats());
+					if(ps.executeUpdate()>0) {
+						System.out.println("New schedule added successfully");
+					}
+				}
+			
+			
+				
+			}
+			
+			
 		}catch(Exception ex) {
 			System.out.println(ex.getMessage());
 		}

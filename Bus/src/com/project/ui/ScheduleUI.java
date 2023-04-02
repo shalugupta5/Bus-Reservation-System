@@ -41,7 +41,7 @@ public class ScheduleUI {
 		System.out.println("Enter Journey Date");
 		LocalDate JourneyDate = LocalDate.parse(sc.next());		
 		
-		ScheduleDTO scheduledto = new ScheduleDTOImpl(BusID, RouteID, JourneyDate, DepartureTime, ArrivalTime);
+		ScheduleDTO scheduledto = new ScheduleDTOImpl(BusID, RouteID, JourneyDate, DepartureTime, ArrivalTime,0);
 		ScheduleDAO scheduledao = new ScheduleDAOImpl();
 		scheduledao.addSchedule(scheduledto);
 	}

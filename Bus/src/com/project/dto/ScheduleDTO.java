@@ -30,6 +30,9 @@ public interface ScheduleDTO {
 	public LocalTime getArrivalTime();
 
 	public void setArrivalTime(LocalTime arrivalTime) ;
+	
+	public int getAvailableSeats();
 
+	public void setAvailableSeats(int availableSeats) ;
 	
 }

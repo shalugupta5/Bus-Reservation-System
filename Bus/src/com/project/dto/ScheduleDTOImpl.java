@@ -10,6 +10,7 @@ public class ScheduleDTOImpl implements ScheduleDTO{
 	private int ScheduleId;
     private int busId;
     private int routeId;
+    private int availableSeats;
     private LocalDate journeyDate;
     private LocalTime departureTime;
     private LocalTime arrivalTime;
@@ -18,7 +19,7 @@ public class ScheduleDTOImpl implements ScheduleDTO{
     	
     }
     
-	public ScheduleDTOImpl(int ScheduleId, int busId, int routeId, LocalDate journeyDate, LocalTime departureTime, LocalTime arrivalTime) {
+	public ScheduleDTOImpl(int ScheduleId, int busId, int routeId, LocalDate journeyDate, LocalTime departureTime, LocalTime arrivalTime, int availableSeats) {
 		super();
 		this.ScheduleId = ScheduleId;
 		this.busId = busId;
@@ -26,9 +27,10 @@ public class ScheduleDTOImpl implements ScheduleDTO{
 		this.journeyDate = journeyDate;
 		this.departureTime = departureTime;
 		this.arrivalTime = arrivalTime;
+		this.availableSeats = availableSeats;
 	}
 	
-	public ScheduleDTOImpl(int busId, int routeId, LocalDate journeyDate, LocalTime departureTime, LocalTime arrivalTime) {
+	public ScheduleDTOImpl(int busId, int routeId, LocalDate journeyDate, LocalTime departureTime, LocalTime arrivalTime, int availableSeats) {
 		super();
 		
 		this.busId = busId;
@@ -36,8 +38,11 @@ public class ScheduleDTOImpl implements ScheduleDTO{
 		this.journeyDate = journeyDate;
 		this.departureTime = departureTime;
 		this.arrivalTime = arrivalTime;
+		this.availableSeats = availableSeats;
 	}
 
+	
+	
 	@Override
 	public int getScheduleId() {
 		return ScheduleId;
@@ -97,13 +102,25 @@ public class ScheduleDTOImpl implements ScheduleDTO{
 	public void setArrivalTime(LocalTime arrivalTime) {
 		this.arrivalTime = arrivalTime;
 	}
+	
+	@Override
+	public int getAvailableSeats() {
+		return availableSeats;
+	}
+
+	@Override
+	public void setAvailableSeats(int availableSeats) {
+		this.availableSeats = availableSeats;
+	}
 
 	@Override
 	public String toString() {
-		return "ScheduleDTOImpl [ScheduleId=" + ScheduleId + ", busId=" + busId + ", routeId=" + routeId + ", journeyDate="
-				+ journeyDate + ", departureTime=" + departureTime + ", arrivalTime=" + arrivalTime + "]";
+		return "ScheduleDTOImpl [ScheduleId=" + ScheduleId + ", busId=" + busId + ", routeId=" + routeId
+				+ ", availableSeats=" + availableSeats + ", journeyDate=" + journeyDate + ", departureTime="
+				+ departureTime + ", arrivalTime=" + arrivalTime + "]";
 	}
-   
+
+	
     
     
     

@@ -1,5 +1,6 @@
 package com.project.ui;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Main {
@@ -8,6 +9,7 @@ public class Main {
 	private static PassengerUI passengerUI;
 	private static RouteUI routeUI;
 	private static ScheduleUI scheduleUI;
+	private static BookingUI bookingUI;
 
 	public static void adminLogIn(Scanner sc) {
 
@@ -42,10 +44,10 @@ public class Main {
 		System.out.println("5. Delete bus details");
 		System.out.println("6. Update route details");
 		System.out.println("7. Delete route details");
-		System.out.println("6. View All bookings");
-		System.out.println("7. View bookings for a date range");
-		System.out.println("8. View bookings by BusName");
-		System.out.println("9. View bookings by mobileNo of Passenger");
+		System.out.println("8. View All bookings");
+		System.out.println("9. View bookings for a date range");
+		System.out.println("10. View bookings by BusNumber");
+		System.out.println("11. View bookings by mobileNo of Passenger");
 		System.out.println("0. for Exit");
 		System.out.println();
 
@@ -91,6 +93,22 @@ public class Main {
 			case 7:
 				routeUI.deleteRoute();
 				break;
+				
+			case 8:
+				bookingUI.viewAllBookings();
+				break;
+				
+			case 9:
+				bookingUI.viewAllBookingsWithDateRange();
+				break;
+				
+			case 10:
+				bookingUI.viewAllBookingsByBusNumber();
+				break;
+				
+			case 11:
+				bookingUI.viewAllBookingsByMobileNumber();
+				break;
 			}
 
 		} while (choice != 0);
@@ -113,7 +131,7 @@ public class Main {
 
 	}
 	
-	public static void passengerMenu(Scanner sc) {
+	public static void passengerMenu(Scanner sc) throws ClassNotFoundException, SQLException {
 		int choice=0;
 		
 		do {
@@ -126,16 +144,34 @@ public class Main {
 				break;
 				
 			case 1:
-				
 				busUI.displayAllBuses();
+				break;
 				
+			case 2:
+				bookingUI.bookTicket();
+				break;
+				
+			case 3:
+				bookingUI.cancelTicket();
+				break;
+				
+			case 4:
+				passengerUI.updatePassenger();
+				break;
+				
+			case 5:
+				passengerUI.getBookingHistory();
+				break;
+				
+			case 6:
+				passengerUI.deletePassengerAccount();
 				break;
 				
 			}
 		}while(choice!=0);
 	}
 
-		public static void passenger(Scanner sc) {
+		public static void passenger(Scanner sc) throws ClassNotFoundException, SQLException {
 			int choice=0;
 			
 			do {
@@ -163,13 +199,14 @@ public class Main {
 		
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		Scanner sc = new Scanner(System.in);
 
 		busUI = new BusUI(sc);
 		passengerUI = new PassengerUI(sc);
 		routeUI = new RouteUI(sc);
 		scheduleUI = new ScheduleUI(sc);
+		bookingUI = new BookingUI(sc);
 
 		int choice = 0;
 		do {
