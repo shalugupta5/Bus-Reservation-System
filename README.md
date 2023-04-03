@@ -62,7 +62,7 @@ username and password fixed for admin (like username: ‘admin’ password: ‘a
 
 
 
-<h3>The roles of the Passenger are:<h3>
+<h3>The roles of the Passenger are:</h3>
 
 
 ![Screenshot (288)](https://user-images.githubusercontent.com/112753764/229465686-24a273eb-914f-46d3-a813-fad12471fec2.png)
