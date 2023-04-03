@@ -39,7 +39,7 @@ public class RouteScheduleDTOImpl implements RouteScheduleDTO{
 
 	@Override
 	public String toString() {
-		return "route=" + route + ", schedule=" + schedule ;
+		return"route=" + route + ", schedule=" + schedule+ "\n";
 	}
 
 	

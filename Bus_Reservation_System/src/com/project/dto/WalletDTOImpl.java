@@ -37,7 +37,7 @@ public class WalletDTOImpl implements WalletDTO{
 
 	@Override
 	public String toString() {
-		return "WalletDTOImpl [userID=" + userID + ", balance=" + balance + "]";
+		return "WalletDTOImpl [userID=" + userID + ", balance=" + balance + "]"+"\n";
 	}
 
 

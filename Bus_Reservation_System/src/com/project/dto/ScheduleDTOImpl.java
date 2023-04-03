@@ -117,7 +117,7 @@ public class ScheduleDTOImpl implements ScheduleDTO{
 	public String toString() {
 		return "ScheduleId=" + ScheduleId + ", busId=" + busId + ", routeId=" + routeId
 				+ ", availableSeats=" + availableSeats + ", journeyDate=" + journeyDate + ", departureTime="
-				+ departureTime + ", arrivalTime=" + arrivalTime ;
+				+ departureTime + ", arrivalTime=" + arrivalTime+"\n" ;
 	}
 
 	

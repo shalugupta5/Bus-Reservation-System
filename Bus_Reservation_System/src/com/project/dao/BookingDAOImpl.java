@@ -46,7 +46,8 @@ public class BookingDAOImpl implements BookingDAO{
 			
 			ResultSet rs=ps.executeQuery();
 			if(DBUtils.isResultSetEmpty(rs)) {
-				System.out.println("No record found");
+				System.out.println(ConsoleColors.RED_BOLD+"No Bus Schedule available for this.");
+				return null;
 			}
 			else {
 				while(rs.next()) {

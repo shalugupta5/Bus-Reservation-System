@@ -89,8 +89,8 @@ public class BookingDTOImpl implements BookingDTO{
 		
 		
 		
-		return "bookingId=" + bookingId + ", scheduleId=" + scheduleId + ", passengerId=" + passengerId
-				+ ", numberOfSeats=" + numberOfSeats + ", totalCost=" + totalCost;
+		return "["+"bookingId=" + bookingId + ", scheduleId=" + scheduleId + ", passengerId=" + passengerId
+				+ ", numberOfSeats=" + numberOfSeats + ", totalCost=" + totalCost+"]"+"\n";
 	}
 	
 	

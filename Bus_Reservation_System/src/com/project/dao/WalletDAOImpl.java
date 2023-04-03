@@ -72,7 +72,7 @@ public class WalletDAOImpl implements WalletDAO{
 		        		if(booingId==0) {
 		        			System.out.println(ConsoleColors.RED_BOLD+"SomeThingWrong");
 		        		}else {
-		        			System.out.println(ConsoleColors.YELLOW_BOLD+"Your bookingID : "+booingId);
+		        			System.out.println(ConsoleColors.YELLOW_BOLD+"Congrats, Your booking has been confirmed. "+ConsoleColors.YELLOW_BOLD+"Your bookingID : "+booingId);
 		        		}
 		        		
 		        	}

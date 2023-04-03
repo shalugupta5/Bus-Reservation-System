@@ -138,7 +138,8 @@ public class Main {
 		System.out.println("| 4. Update your passenger details                           |");
 		System.out.println("| 5. View tickets booking history                            |");
 		System.out.println("| 6. Delete your passenger account                           |");
-		System.out.println("| 7. Logout                                                  |");
+		System.out.println("| 7. Create Wallet Account                                   |");              
+		System.out.println("| 8. Add Balance to wallet                                   |");            
 		System.out.println("| 0. for Exit                                                |");
 		
 		System.out.println("+------------------------------------------------------------+");
@@ -180,6 +181,15 @@ public class Main {
 			case 6:
 				passengerUI.deletePassengerAccount();
 				break;
+				
+			case 7:
+				passengerUI.addWallet();
+				break;
+				
+			case 8:
+				passengerUI.updateWallet();
+				break;
+
 				
 			default :
 				System.out.println(ConsoleColors.RED_BOLD+"Invalid Selection");

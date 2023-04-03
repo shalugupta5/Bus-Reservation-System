@@ -69,8 +69,8 @@ public class RouteDTOImpl implements RouteDTO{
 
 	@Override
 	public String toString() {
-		return "routeID=" + routeID + ", SourceLocation=" + SourceLocation + ", DestinationLocation="
-				+ DestinationLocation + ", distance=" + distance ;
+		return " SourceLocation=" + SourceLocation + ", DestinationLocation="
+				+ DestinationLocation + ", distance=" + distance +"\n";
 	}
 	
 	

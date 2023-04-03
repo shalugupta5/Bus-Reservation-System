@@ -1,5 +1,6 @@
 package com.project.ui;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -116,6 +117,22 @@ public class PassengerUI {
 	public void deletePassengerAccount() {
 		PassengerDAO passengerdao = new PassengerDAOImpl();
 		passengerdao.deletePassengerAccount(userName);
+	}
+	
+	public void addWallet() throws ClassNotFoundException, SQLException {
+		PassengerDAO passengerdao=new PassengerDAOImpl();
+		
+		int passengerID=passengerdao.searchPassenger(userName);
+		BookingUI.addBalnce(passengerID);
+//		System.out.println(passengerID);
+	}
+	
+	public void updateWallet() throws ClassNotFoundException, SQLException {
+		PassengerDAO passengerdao=new PassengerDAOImpl();
+		
+		int passengerID=passengerdao.searchPassenger(userName);
+		BookingUI.updateBalnce(passengerID);
+//		System.out.println(passengerID);
 	}
 	
 	public void logout() {
