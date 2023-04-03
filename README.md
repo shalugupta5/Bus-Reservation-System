@@ -106,6 +106,13 @@ username and password fixed for admin (like username: ‘admin’ password: ‘a
  
  <h3>Booking confirm:</h3>
  
+ <h3>Tach stack:</h3>
+ 
+ MySql
+ 
+ JDBC
+ 
+ Spring Boot.
  
  
 
