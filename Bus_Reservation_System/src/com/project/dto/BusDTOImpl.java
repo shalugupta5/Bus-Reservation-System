@@ -71,7 +71,7 @@ public class BusDTOImpl implements BusDTO{
 
 	@Override
 	public String toString() {
-		return "BusNumber=" + BusNumber + ", BusType=" + BusType + ", TotalSeats=" + TotalSeats ;
+		return "["+"BusNumber=" + BusNumber + ", BusType=" + BusType + ", TotalSeats=" + TotalSeats +"]"+"\n";
 		//return "        " + BusNumber + "       " + BusType + "        " + TotalSeats + "";
 	
 	}

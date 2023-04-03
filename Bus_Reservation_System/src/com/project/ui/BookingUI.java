@@ -43,7 +43,7 @@ public class BookingUI {
 	public static void updateBalnce(int passengerID) {
 		
 		System.out.println(ConsoleColors.BLACK_BOLD);
-		System.out.println("Enter amount you want to add in your wallent");
+		System.out.println("Enter amount you want to add in your wallet");
 		
 		System.out.println(ConsoleColors.GREEN_BOLD);
 		double amount=sc.nextDouble();
@@ -102,6 +102,9 @@ public class BookingUI {
 		BookingDAO booking  = new BookingDAOImpl();
 		List<RouteScheduleDTO> li = booking.bookTicket(departureCity, arrivalCity, date);
 		System.out.println(ConsoleColors.BLACK_BOLD);
+		if(li!=null) {
+			
+		
 		System.out.println("Available schedules:");
 		System.out.println(ConsoleColors.GREEN_BOLD);
 		System.out.println(li);
@@ -151,10 +154,27 @@ public class BookingUI {
 			}
 			
 		}
+		else {
+			System.out.println();
 		}
+		
+//		 else {
+//				System.out.println(ConsoleColors.RED_BOLD+"Enter valid date, this has been passed.");
+//			}
+		 }
+		
+		else {
+			 Main.passengerMenu(sc);
+		 }
+		
+		 }
+		 
 		 else {
-				System.out.println(ConsoleColors.RED_BOLD+"Enter valid date, this has been passed.");
-			}
+			System.out.println(ConsoleColors.RED_BOLD+"Enter valid date, this has been passed.");
+		}
+//		 else {
+//			 Main.passengerMenu(sc);
+//		 }
 	
 	}
 	

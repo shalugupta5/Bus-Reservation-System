@@ -92,7 +92,7 @@ public class PassengerDTOImpl implements PassengerDTO{
 	@Override
 	public String toString() {
 		return "PassengerDTOImpl [id=" + id + ", name=" + name + ", mobileNumber=" + mobileNumber + ", password="
-				+ password + "]";
+				+ password + "]"+"\n";
 	}
     
     
