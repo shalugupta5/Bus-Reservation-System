@@ -14,7 +14,9 @@ Passenger and Administrator. Users can book/reserve their tickets one day before
 ![Screenshot (285)](https://user-images.githubusercontent.com/112753764/229438307-f6456f81-6756-4f9a-84e6-abfcedb22440.png)
 
 
+<h3> Flow chart: </h3>
 
+![Screenshot (306)](https://user-images.githubusercontent.com/112753764/231091096-3477dbcf-ff0d-4dbf-8a8a-a142396561f9.png)
 
 
 
