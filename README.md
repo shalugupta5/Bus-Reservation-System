@@ -26,6 +26,11 @@ Passenger and Administrator. Users can book/reserve their tickets one day before
 
 2. Passenger
 
+
+
+
+
+
 ![Screenshot (286)](https://user-images.githubusercontent.com/112753764/229464631-a9c83d45-8e50-439b-aa9b-dc6e77c168a1.png)
 
 
@@ -62,12 +67,15 @@ username and password fixed for admin (like username: ‘admin’ password: ‘a
 11. Logout
 
 
+![Screenshot (316)](https://user-images.githubusercontent.com/112753764/232108533-620ed316-b9ef-4785-be23-c091c7c5613e.png)
+
 
 
 <h3>The roles of the Passenger are:</h3>
 
 
-![Screenshot (288)](https://user-images.githubusercontent.com/112753764/229465686-24a273eb-914f-46d3-a813-fad12471fec2.png)
+![Screenshot (288)](https://user-images.githubusercontent.com/112753764/232109132-dc400f63-3e44-41fc-8d82-25e377987f27.png)
+
 
 
 
@@ -107,6 +115,14 @@ username and password fixed for admin (like username: ‘admin’ password: ‘a
  
  
  <h3>Booking confirm:</h3>
+ 
+ ![Screenshot (317)](https://user-images.githubusercontent.com/112753764/232111001-5f61dc54-cbad-4698-a8c2-f415684a5ce1.png)
+
+
+ <h3>Ticket cancellation:</h3>
+ 
+ ![Screenshot (318)](https://user-images.githubusercontent.com/112753764/232111424-5be1a778-5d81-4409-aee2-052c8fe0c5db.png)
+
  
  <h3>Tach stack:</h3>
  
